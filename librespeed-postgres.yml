@@ -1,0 +1,34 @@
+version: '2'
+services:
+    librespeed:
+        image: adolfintel/speedtest
+        container_name: speedtest.80
+        ports:
+            - 80:80
+        environment:
+            - MODE=standalone
+            - TELEMETRY=true
+            - PASSWORD=password
+            - DB_TYPE=postgresql
+            - DB_USERNAME=speedtest
+            - DB_PASSWORD=************************
+            - DB_HOSTNAME=localhost
+            - DB_NAME=speedtest
+        restart: unless-stopped
+    postgres:
+      container_name: postgres.5432
+      image: postgres:9.6.3-alpine
+      restart: always
+      ports:
+        - 5432:5432
+      expose:
+        - 5432
+      volumes:
+        - ./telemetry_postgresql.sql:/telemetry_postgresql.sql
+        - $PWD/postgres:/var/lib/postgresql/data
+      environment:
+        - PUID=1000
+        - PGID=994
+        - POSTGRES_DB=speedtest
+        - POSTGRES_USER=speedtest
+        - POSTGRES_PASSWORD=************************
