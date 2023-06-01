@@ -1,15 +1,15 @@
 version: "3.2"
 services:
-  rabbitmq-2:
+  rabbitmq:
     image: rabbitmq:3.11-management-alpine
-    container_name: 'rabbitmq-2'
+    container_name: 'rabbitmq'
     environment:
       - RABBITMQ_DEFAULT_USER=rabbitmq
       - RABBITMQ_DEFAULT_PASS=rabbitmq
     restart: always
     ports:
-        - 5673:5672
-        - 15673:15672
+        - 5672:5672
+        - 15672:15672
     networks:
         - rabbitmq_go_net
 
