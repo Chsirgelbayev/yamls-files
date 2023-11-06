@@ -13,20 +13,20 @@
 
 ### Список сервисов
 
-| Наименование        |         адрес         | Порт |
-| ------------------- | :-------------------: | ---: |
-| main                | http://localhost:3001 | 3001 |
-| worker              |           -           | 3002 |
-| events-receiver     | http://localhost:3003 | 3003 |
-| telegram-bot        |           -           |    - |
-| anomaly-monitoring  |           -           |    - |
-| black-list-receiver |           -           |    - |
-| pc-sender           |           -           | 3004 |
-| redis-storage       |           -           |    - |
-| cron                |           -           |    - |
-| logger              |           -           |    - |
-| external-system     |           -           | 3005 |
-| pre-processing      |           -           | 3006 |
-| mobile              |           -           | 3007 |
-| violation-process   |           -           | 3008 |
-| violator-warnings   |           -           | 3009 |
+| Наименование | | Порт |
+| ------------------- | | ---- |
+| main |
+| worker | | 3002 |
+| events-receiver |
+| telegram-bot | | - |
+| anomaly-monitoring | | - |
+| black-list-receiver | | - |
+| pc-sender | | 3004 |
+| redis-storage | | - |
+| cron | | - |
+| logger | | - |
+| external-system | | 3005 |
+| pre-processing | | 3006 |
+| mobile | | 3007 |
+| violation-process | | 3008 |
+| violator-warnings | | 3009 |
